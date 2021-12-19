@@ -66,6 +66,11 @@ def index():
             database_connection.close()
 
         network = request.args.get("network")
+        if network == None:
+            networks_menu = ""
+            for network in networks:
+                networks_menu += "<a href=\"http://" + internet_server_adress + "/?network=" + network + "\">" + network + "</a></br>"
+            return networks_menu
         try:
             networks[network]
             response = make_response(render_template(networks[network][0]))
