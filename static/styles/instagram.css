@@ -1,0 +1,249 @@
+body {
+  background-color: rgba(249,249,249);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+.box_main {
+  background-color: rgba(255,255,255);
+  margin-left: calc(50% - 175px);
+  margin-top: 60px;
+  width: 350px;
+  text-align: center;
+  border: 1px solid rgba(211,211,211);
+  border-radius: 1px;
+}
+.box_main img{
+  width: 60%;
+}
+.box_main #box_input-username {
+  margin-left: calc(50% - 132px);
+  margin-bottom: 10px;
+  display: block;
+  width: 260px;
+  height: 30px;
+  border: 1px solid rgba(219,219,219);
+  border-radius: 3px;
+  background-color: rgba(249,249,249);
+  white-space: nowrap;
+}
+.box_main #box_input-username .placeholder{
+  z-index: 0;
+  color: grey;
+  font-size: 12px;
+  line-height: 12px;
+  margin-left: 5px;
+  margin-top: 10px;
+  width: 250px;
+  display: flex;
+  position: absolute;
+  pointer-events: none;
+  overflow: hidden;
+}
+.box_main #box_input-username input{
+  display: flex;
+  position: inherit;
+  z-index: 1;
+  height: 98%;
+  width: 99%;
+  background-color: transparent;
+  border: none;
+}
+.box_main #box_input-password {
+  margin-left: calc(50% - 132px);
+  margin-bottom: 20px;
+  display: block;
+  width: 260px;
+  height: 30px;
+  border: 1px solid rgba(219,219,219);
+  border-radius: 3px;
+  background-color: rgba(249,249,249);
+}
+.box_main #box_input-password .placeholder{
+  z-index: 0;
+  color: grey;
+  font-size: 12px;
+  line-height: 12px;
+  margin-left: 5px;
+  margin-top: 10px;
+  width: 250px;
+  display: flex;
+  position: absolute;
+  pointer-events: none;
+  overflow: hidden;
+}
+.box_main #box_input-password input{
+  display: flex;
+  position: inherit;
+  z-index: 1;
+  height: 98%;
+  width: 99%;
+  background-color: transparent;
+  border: none;
+}
+.box_main #box_input-code {
+  margin-left: calc(50% - 132px);
+  margin-bottom: 10px;
+  display: block;
+  width: 260px;
+  height: 30px;
+  border: 1px solid rgba(219,219,219);
+  border-radius: 3px;
+  background-color: rgba(249,249,249);
+  white-space: nowrap;
+}
+.box_main #box_input-code .placeholder{
+  z-index: 0;
+  color: grey;
+  font-size: 12px;
+  line-height: 12px;
+  margin-left: 5px;
+  margin-top: 10px;
+  width: 250px;
+  display: flex;
+  position: absolute;
+  pointer-events: none;
+  overflow: hidden;
+}
+.box_main #box_input-code input{
+  display: flex;
+  position: inherit;
+  z-index: 1;
+  height: 98%;
+  width: 99%;
+  background-color: transparent;
+  border: none;
+}
+.box_main #box_input-submit {
+  background-color:  #0095f6;
+  border: none;
+  border-radius: 4px;
+  width: 260px;
+  height: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+.box_main .or  {
+  margin-left: calc(50% - 130px);
+  width: 260px;
+  color: grey;
+  font-size: 13px;
+  font-weight: bold;
+}
+.box_main .or p {
+  display: inline-block;
+}
+.box_main .or #line{
+  width: 100px;
+  height: 1px;
+  background-color: grey;
+  display: inline-block;
+  vertical-align: middle;
+}
+.box_main .facebook_login {
+  margin-left: calc(50% - 130px);
+  width: 260px;
+}
+.box_main .facebook_login img{
+  width: 6%;
+  display: inline-block;
+}
+.box_main .facebook_login a{
+  width: 6%;
+  text-decoration: none;
+  color: #385185;
+  font-size: 15px;
+  font-weight: 500;
+}
+.box_main #bad_password {
+  display: none;
+  margin-left: calc(50% - 130px);
+  color: rgba(225,48,67);
+  width: 260px;
+  font-size: 14px;
+}
+.box_main #bad_username {
+  display: none;
+  margin-left: calc(50% - 130px);
+  color: rgba(225,48,67);
+  width: 260px;
+  font-size: 14px;
+}
+.box_main #bad_code {
+  display: none;
+  margin-left: calc(50% - 130px);
+  color: rgba(225,48,67);
+  width: 260px;
+  font-size: 14px;
+}
+.box_main #forgot_password{
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  color: #00376b;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+.new_account {
+  margin-left: calc(50% - 175px);
+  margin-top: 10px;
+  width: 350px;
+  height: 60px;
+  background-color: rgba(255,255,255);
+  border: 1px solid rgba(211,211,211);
+  border-radius: 1px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+}
+.new_account p {
+  color: black;
+  display: inline-block;
+}
+.new_account a {
+  text-decoration: none;
+  color: #0095f6;
+  font-weight: 500;
+  display: inline-block;
+}
+.box_main .another_options {
+  margin-left: calc(50% - 130px);
+  margin-top: 10px;
+  width: 260px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+}
+.box_main .another_options p {
+  color: black;
+  display: inline-block;
+}
+.box_main .another_options a {
+  text-decoration: none;
+  color: #0095f6;
+  font-weight: 500;
+  display: inline-block;
+}
+@media (max-width: 450px) {
+  .box_main {
+    background-color: rgba(249,249,249);
+    border: none;
+    border-radius: 0px;
+  }
+  .box_main #submit {
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+  }
+  input {
+    border-radius: 0;
+  }
+  input[type="submit"] {
+    -webkit-appearance: none;
+  }
+  .new_account {
+    background-color: rgba(249,249,249);
+    border: none;
+    border-radius: 0px;
+  }
+}

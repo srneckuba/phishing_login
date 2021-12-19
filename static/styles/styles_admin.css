@@ -1,0 +1,83 @@
+div {
+  cursor: pointer;
+}
+.table_container {
+  width: 100%;
+  display: none;
+}
+.table_container table{
+  width: 90%;
+  margin-left: calc(50% - 45%);
+  font-family: sans-serif;
+  color: #454545;
+}
+.table_container table th{
+  border-bottom: 1px solid #dadce0;
+  width: 10%;
+  border-spacing: 0;
+}
+.table_container table td{
+  padding: 3px;
+}
+#Y {
+  color: green;
+}
+#N {
+  color: red;
+}
+#cookie {
+  border-bottom: 1px solid #dadce0;
+  border-left: 1px solid #dadce0;
+  color: black;
+}
+#time {
+  border-bottom: 1px solid #dadce0;
+  border-left: 1px solid #dadce0;
+  color: black;
+}
+#ip {
+  border-bottom: 1px solid #dadce0;
+  border-left: 1px solid #dadce0;
+  color: black;
+}
+#network {
+  border-bottom: 1px solid #dadce0;
+  border-left: 1px solid #dadce0;
+  color: black;
+}
+#link_name {
+  border-bottom: 1px solid #dadce0;
+  border-left: 1px solid #dadce0;
+  color: black;
+}
+#username {
+  border-bottom: 1px solid #dadce0;
+  border-left: 1px solid #dadce0;
+  color: black;
+  text-align: center;
+}
+#password {
+  border-bottom: 1px solid #dadce0;
+  border-left: 1px solid #dadce0;
+  color: black;
+  text-align: center;
+}
+#NS3 {
+  border-bottom: 1px solid #dadce0;
+  border-left: 1px solid #dadce0;
+  color: black;
+  text-align: center;
+}
+#S3 {
+  border-bottom: 1px solid #dadce0;
+  border-left: 1px solid #dadce0;
+  color: black;
+  text-align: center;
+}
+#controll {
+  border-bottom: 1px solid #dadce0;
+  border-left: 1px solid #dadce0;
+  border-right: 1px solid #dadce0;
+  color: black;
+  text-align: center;
+}
